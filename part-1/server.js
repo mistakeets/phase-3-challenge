@@ -19,6 +19,11 @@ app.get('/subtract', (request, response) => {
   response.send(subtractNumbers.toString())
 })
 
+app.get('/double/:number', (request, response) => {
+  let doubleNumber = parseInt(request.params.number) * 2
+  response.send(doubleNumber.toString())
+})
+
 app.listen(3000, () => {
   console.log('Express Server started on port 3000')
 })
