@@ -1,5 +1,4 @@
 const express = require('express')
-
 const app = express()
 
 app.get('/', (request, response) => {
@@ -8,6 +7,11 @@ app.get('/', (request, response) => {
 
 app.get('/zero', (request, response) => {
   response.send('0')
+})
+
+app.get('/add', (request, response) => {
+  let addNumbers = parseInt(request.query.a) + parseInt(request.query.b)
+  response.send(addNumbers.toString())
 })
 
 app.listen(3000, () => {
