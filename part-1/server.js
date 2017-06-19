@@ -14,6 +14,11 @@ app.get('/add', (request, response) => {
   response.send(addNumbers.toString())
 })
 
+app.get('/subtract', (request, response) => {
+  let subtractNumbers = parseInt(request.query.a) - parseInt(request.query.b)
+  response.send(subtractNumbers.toString())
+})
+
 app.listen(3000, () => {
   console.log('Express Server started on port 3000')
 })
