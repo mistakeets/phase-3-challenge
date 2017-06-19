@@ -19,7 +19,7 @@ Each requirement has a point value. A fully complete requirement gets full point
 
 ## General Requirements
 
-- [ ] __10:__ Solution is in a public repository called `phase-3-challenge`
+- [x] __10:__ Solution is in a public repository called `phase-3-challenge`
 - [ ] __10:__ Solution repository has 3 folders: `part-1`, `part-2`, and `part-3`.
 - [ ] __20:__ Git history shows frequent commits.
 
@@ -58,13 +58,13 @@ response: 18
 
 ### Requirements
 
-- [ ] __10:__ All files are stored under the `part-1/` folder
-- [ ] __10:__ All dependencies are specified in a `package.json` file
-- [ ] __10:__ Web server can be started with `npm start` command
-- [ ] __20:__ GET requests to the `/zero` route respond with plain text `0`
-- [ ] __20:__ GET requests to the `/add` route add the two numbers provided in the query string variables `a` and `b` and respond with the result
-- [ ] __20:__ GET requests to the `/subtract` route subtract the value of the query string variable `b` from the query string variable `a` and respond with the result
-- [ ] __20:__ GET requests to the `/double/:number` route doubles the number provided in the URL (in place of `:number`) and responds with the result
+- [x] __10:__ All files are stored under the `part-1/` folder
+- [x] __10:__ All dependencies are specified in a `package.json` file
+- [x] __10:__ Web server can be started with `npm start` command
+- [x] __20:__ GET requests to the `/zero` route respond with plain text `0`
+- [x] __20:__ GET requests to the `/add` route add the two numbers provided in the query string variables `a` and `b` and respond with the result
+- [x] __20:__ GET requests to the `/subtract` route subtract the value of the query string variable `b` from the query string variable `a` and respond with the result
+- [x] __20:__ GET requests to the `/double/:number` route doubles the number provided in the URL (in place of `:number`) and responds with the result
 
 ## Part 2: Database for grocery store & tests
 

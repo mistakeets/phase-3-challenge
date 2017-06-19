@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 
 app.get('/', (request, response) => {
-  response.send('Hello World')
+  response.send('Do the math! Use /add, /subtract, or /double/number')
 })
 
 app.get('/zero', (request, response) => {
@@ -25,5 +25,5 @@ app.get('/double/:number', (request, response) => {
 })
 
 app.listen(3000, () => {
-  console.log('Express Server started on port 3000')
+  console.log('Fun Express Math Server started on port 3000!!!')
 })
