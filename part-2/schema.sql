@@ -27,6 +27,6 @@ CREATE TABLE grocery_order (
 
 CREATE TABLE grocery_orderdetail (
   order_id INTEGER REFERENCES grocery_order (order_id),
-  item_id INTEGER REFERENCES item (item_id)
+  item_id INTEGER REFERENCES item (item_id),
   PRIMARY KEY (order_id, item_id)
 );
