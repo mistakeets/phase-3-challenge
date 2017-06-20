@@ -41,15 +41,3 @@ VALUES(4, 12);
 
 INSERT INTO grocery_orderdetail (order_id, item_id)
 VALUES(4, 4);
-
-
-
-
-
-
-
-
-
-
-
-
