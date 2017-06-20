@@ -1,0 +1,24 @@
+{
+  "name": "part-2",
+  "version": "1.0.0",
+  "description": "database phase 3",
+  "main": "database.js",
+  "scripts": {
+    "test": "mocha database_test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mistakeets/phase-3-challenge.git"
+  },
+  "author": "Keith O.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mistakeets/phase-3-challenge/issues"
+  },
+  "homepage": "https://github.com/mistakeets/phase-3-challenge#readme",
+  "dependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2",
+    "pg-promise": "^5.9.4"
+  }
+}
