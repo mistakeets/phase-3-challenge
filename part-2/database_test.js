@@ -1,4 +1,5 @@
-import { expect } from 'chai'
+const chai = require('chai')
+const expect = chai.expect
 const { itemsInSection, cheapItems, countItemsInSection } = require('./database.js')
 
 it('items in section bulk returns Flour Pasta and Rice', finish => {
