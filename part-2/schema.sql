@@ -21,7 +21,12 @@ CREATE TABLE shopper (
 
 CREATE TABLE grocery_order (
   order_id SERIAL PRIMARY KEY,
-  order_time TIMESTAMP,
-  shopper_id SERIAL REFERENCES shopper (shopper_id),
-  item_id SERIAL REFERENCES item (item_id)
+  order_date DATE,
+  shopper_id INTEGER REFERENCES shopper (shopper_id)
+);
+
+CREATE TABLE grocery_orderdetail (
+  order_id INTEGER REFERENCES grocery_order (order_id),
+  item_id INTEGER REFERENCES item (item_id)
+  PRIMARY KEY (order_id, item_id)
 );
