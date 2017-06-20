@@ -10,12 +10,23 @@ const itemsInSection = section =>
 const cheapItems = () =>
   db.query('SELECT item_id, item_price FROM item WHERE item_price < \'$10.00\' ORDER BY item_price')
 
+const countItemsInSection = section =>
+  db.query('SELECT COUNT(*) FROM item WHER item_section = $1', section)
+
+const mostRecentOrders = () =>
+  db.query('SELECT order_id, order_date FROM grocery_order ORDER BY order_date DESC LIMIT 10')
+
+const lastShopperName = () =>
+  db.query('SELECT shopper_id FROM grocery_order ORDER BY order_date DESC LIMIT 1')
+  .then(answer => {
+    return answer[0].shopper
+  })
+
 module.exports = {
   allItems,
   itemsInSection,
   cheapItems,
   countItemsInSection,
   mostRecentOrders,
-  lastShopperName,
-  orderTotal
+  lastShopperName
 }
