@@ -10,6 +10,7 @@ var cartPrice = 0
 
 cartBtn.onclick = function() {
   modal.style.display = 'block'
+  showGroceryList()
 }
 
 span.onclick = function() {
@@ -31,14 +32,14 @@ function addToCart(addThing, price) {
 }
 
 function showGroceryList() {
-  document.getElementsByClassName('groceryItemList')[0].innerHTML = ""
-  document.getElementsByClassName('groceryPriceList')[0].innerHTML = ""
-  var itemContainer = document.getElementsByClassName('groceryItemList')[0]
-  var priceContainer = document.getElementsByClassName('groceryPriceList')[0]
+  document.getElementsByClassName('grocery-item-list')[0].innerHTML = ''
+  document.getElementsByClassName('grocery-price-list')[0].innerHTML = ''
+  var itemContainer = document.getElementsByClassName('grocery-item-list')[0]
+  var priceContainer = document.getElementsByClassName('grocery-price-list')[0]
 
   for (var i = 0; i < cartItems.length; i++) {
-    var li = document.createElement("li")
-    var li2 = document.createElement("li")
+    var li = document.createElement('li')
+    var li2 = document.createElement('li')
     li.innerText = cartItems[i]
     li2.innerText = priceItems[i]
     itemContainer.appendChild(li)

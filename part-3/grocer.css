@@ -42,6 +42,18 @@ body {
   cursor: pointer;
 }
 
+.grocery-item-list,
+.gorcery-price-list {
+  margin-top: 10px;
+  list-style-type: none;
+  display: inline-block;
+  zoom: 1
+}
+
+.grocery-price-list {
+  margin-left: 50%;
+}
+
 
 /* LAYOUT UTILS */
 
