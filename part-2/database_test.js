@@ -32,3 +32,17 @@ describe('cheapItems()', () => {
     done()
   })
 })
+
+describe('countItemsInSection(packaged)', () => {
+  it('countItemsInSection packaged returns 5', done => {
+    dbQuery.countItemsInSection('packaged')
+      .then(item => {
+        expect(item[0].count).to.equal('5')
+        done()
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    done()
+  })
+})
