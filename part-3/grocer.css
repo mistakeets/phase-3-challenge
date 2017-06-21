@@ -17,11 +17,11 @@ body {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: #eee;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-inside {
-  background-color: #ddd;
+  background-color: #fff;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #aaa;
@@ -29,7 +29,7 @@ body {
 }
 
 .close {
-  color: #bbb;
+  color: #aaa;
   float: right;
   font-size: 20px;
   font-weight: bold;
@@ -39,6 +39,38 @@ body {
 .close:focus {
   color: #000;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.grocery-item-list {
+  margin-top: 10px;
+  list-style-type: none;
+  display: inline-block;
+  zoom: 1;
+}
+
+.grocery-price-list {
+  margin-top: 10px;
+  margin-left: 50%;
+  list-style-type: none;
+  display: inline-block;
+  zoom: 1;
+}
+
+#modal-clear-items {
+  background-color: #fff;
+  border: 2px solid #000;
+  outline: none;
+  color: #000;
+  box-shadow: 5px 5px #37383a;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  padding: 4px 12px
+}
+
+#modal-clear-items:hover {
+  background-color: #ccc;
   cursor: pointer;
 }
 
