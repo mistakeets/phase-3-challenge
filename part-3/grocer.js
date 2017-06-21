@@ -29,3 +29,19 @@ function addToCart(addThing, price) {
   count++
   document.getElementById('cart-item-count').innerHTML = `(${count})`
 }
+
+function showGroceryList() {
+  document.getElementsByClassName('groceryItemList')[0].innerHTML = ""
+  document.getElementsByClassName('groceryPriceList')[0].innerHTML = ""
+  var itemContainer = document.getElementsByClassName('groceryItemList')[0]
+  var priceContainer = document.getElementsByClassName('groceryPriceList')[0]
+
+  for (var i = 0; i < cartItems.length; i++) {
+    var li = document.createElement("li")
+    var li2 = document.createElement("li")
+    li.innerText = cartItems[i]
+    li2.innerText = priceItems[i]
+    itemContainer.appendChild(li)
+    priceContainer.appendChild(li2)
+  }
+}
