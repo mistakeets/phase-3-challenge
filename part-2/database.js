@@ -3,7 +3,7 @@ const pgp = pgPromise()
 const db = pgp({ database: 'grocery_store' })
 
 const allItems = () => {
-  return db.any('SELECT * FROM item')
+  return db.any('SELECT * FROM grocery_item')
 }
 
 const itemsInSection = section => {
