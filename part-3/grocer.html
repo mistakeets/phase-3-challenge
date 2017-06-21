@@ -18,12 +18,20 @@
 
   <div id="cartModal" class="modal">
     <div class="modal-inside">
-      <span>Cart</span>
-      <span class="close">&times</span>
-    </div>
-    <div>
-      <span><ul class="grocery-item-list"></ul></span>
-      <span><ul class="grocery-price-list"></ul></span>
+      <div>
+        <span>Cart</span>
+        <span class="close">&times;</span>
+      </div>
+      <div>
+        <span><ul class="grocery-item-list"></ul></span>
+        <span><ul class="grocery-price-list"></ul></span>
+      </div>
+      <div>
+        <span>
+          <button onclick="clearItem()" type="button" id="modal-delete">Clear</button>
+        </span>
+        <span class="total-price"></span>
+      </div>
     </div>
   </div>
 
