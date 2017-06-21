@@ -26,27 +26,9 @@ describe('cheapItems()', () => {
         expect(item[item.length - 1].name).to.equal('Honey')
         done()
       })
-      .catch(console.log)
+      .catch(err => {
+        console.log(err)
+      })
     done()
   })
 })
-
-// it('cheapItems returns Fish as the first item and Honey as the last item', done => {
-//   cheapItems().then(answers => {
-//       expect(answers[0].price).to.equal('$0.49')
-//       expect(answers[answers.length - 1].price).to.equal('$9.31')
-//       done()
-//     })
-//     .catch(console.log)
-// })
-// })
-
-// it('countItemsInSection packaged returns 5', done => {
-//   countItemsInSection('packaged').then(answer => {
-//       expect(answer).to.equal('5')
-//       done()
-//     })
-//     .catch(err => {
-//       console.log(err)
-//     })
-// })
