@@ -46,3 +46,12 @@ function showGroceryList() {
     priceContainer.appendChild(li2)
   }
 }
+
+function clearItems() {
+  count = 0
+  cartPrice = 0
+  cartItems = []
+  cartPrice = []
+  document.getElementById('cart-item-count').innerHTML = `(${count})`
+  modal.style.display = 'none'
+}
