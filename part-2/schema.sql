@@ -3,11 +3,11 @@ CREATE DATABASE grocery_store;
 
 \c grocery_store;
 
-CREATE TABLE item (
+CREATE TABLE grocery_item (
   item_id SERIAL PRIMARY KEY,
-  item_name VARCHAR(50),
-  item_price DECIMAL(10,2),
-  item_section VARCHAR(50)
+  name VARCHAR(50),
+  price DECIMAL(10,2),
+  section VARCHAR(50)
 );
 
 CREATE TABLE shopper (
@@ -27,6 +27,6 @@ CREATE TABLE grocery_order (
 
 CREATE TABLE grocery_orderdetail (
   order_id INTEGER REFERENCES grocery_order (order_id),
-  item_id INTEGER REFERENCES item (item_id),
+  item_id INTEGER REFERENCES grocery_item (item_id),
   PRIMARY KEY (order_id, item_id)
 );

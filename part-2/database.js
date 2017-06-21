@@ -1,26 +1,30 @@
-const pgp = require('pg-promise')()
+const pgPromise = require('pg-promise')
+const pgp = pgPromise()
 const db = pgp({ database: 'grocery_store' })
 
-const allItems = () =>
-  db.query('SELECT * FROM item')
+const allItems = () => {
+  return db.any('SELECT * FROM item')
+}
 
-const itemsInSection = section =>
-  db.query('SELECT item_id, item_name FROM item WHERE item_section = $1', section)
+const itemsInSection = section => {
+  return db.any('SELECT item_id, name FROM grocery_item WHERE section = $1', section)
+}
 
-const cheapItems = () =>
-  db.query('SELECT item_id, item_price FROM item WHERE item_price < 10 ORDER BY item_price ASC')
+const cheapItems = () => {
+  return db.any('SELECT item_id, name, price FROM grocery_item WHERE price < 10 ORDER BY price ASC')
+}
 
-const countItemsInSection = section =>
-  db.query('SELECT COUNT(*) FROM item WHERE item_section = $1', section)
+const countItemsInSection = section => {
+  return db.any('SELECT COUNT(*) FROM grocery_item WHERE section = $1', section)
+}
 
-const mostRecentOrders = () =>
-  db.query('SELECT order_id, order_date FROM grocery_order ORDER BY order_date DESC LIMIT 10')
+const mostRecentOrders = () => {
+  return db.any('SELECT order_id, order_date FROM grocery_order ORDER BY order_date DESC LIMIT 10')
+}
 
-const lastShopperName = () =>
-  db.query('SELECT shopper_id FROM grocery_order ORDER BY order_date DESC LIMIT 1')
-  .then(answer => {
-    return answer[0].shopper
-  })
+const lastShopperName = () => {
+  return db.any('SELECT shopper_name FROM grocery_order JOIN shopper ON grocery_order.shopper_id=shopper.shopper_id ORDER BY order_date DESC LIMIT 1')
+}
 
 module.exports = {
   allItems,

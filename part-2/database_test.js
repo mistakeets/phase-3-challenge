@@ -2,47 +2,44 @@ const chai = require('chai')
 const expect = chai.expect
 const dbQuery = require('./database')
 
-describe('itemsInSection(bulk)', () => {
+describe('itemsInSection(bulk) test', () => {
   it('returns items Flour Pasta Rice', done => {
-    dbQuery.itemsInSection('bulk')
-      .then(item => {
-        expect(item[0].name).to.equal('Flour')
-        expect(item[1].name).to.equal('Pasta')
-        expect(item[2].name).to.equal('Rice')
+    dbQuery.itemsInSection('bulk').then(items => {
+        expect(items[0].name).to.equal('Flour')
+        expect(items[1].name).to.equal('Pasta')
+        expect(items[2].name).to.equal('Rice')
         done()
       })
       .catch(err => {
-        console.log(err)
+        console.error(err)
+        done()
       })
-    done()
   })
 })
 
-describe('cheapItems()', () => {
-  it('returns the item Fish as first item and Honey as last item', done => {
-    dbQuery.cheapItems()
-      .then(item => {
-        expect(item[0].name).to.equal('Fish')
-        expect(item[item.length - 1].name).to.equal('Honey')
+describe('cheapItems() test', () => {
+  it('returns the first item Fish and last item Honey', done => {
+    dbQuery.cheapItems().then(items => {
+        expect(items[0].name).to.equal('Fish')
+        expect(items[items.length - 1].name).to.equal('Honey')
         done()
       })
       .catch(err => {
-        console.log(err)
+        console.error(err)
+        done()
       })
-    done()
   })
 })
 
-describe('countItemsInSection(packaged)', () => {
-  it('countItemsInSection packaged returns 5', done => {
-    dbQuery.countItemsInSection('packaged')
-      .then(item => {
-        expect(item[0].count).to.equal('5')
+describe('countItemsInSection(packaged) test', () => {
+  it('returns 5 as the item count', done => {
+    dbQuery.countItemsInSection('packaged').then(items => {
+        expect(items[0].count).to.equal('5')
         done()
       })
       .catch(err => {
-        console.log(err)
+        console.error(err)
+        done()
       })
-    done()
   })
 })
