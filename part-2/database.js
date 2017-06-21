@@ -8,7 +8,7 @@ const itemsInSection = section =>
   db.query('SELECT item_id, item_name FROM item WHERE item_section = $1', section)
 
 const cheapItems = () =>
-  db.query('SELECT item_id, item_price FROM item WHERE item_price < \'$10.00\' ORDER BY item_price')
+  db.query('SELECT item_id, item_price FROM item WHERE item_price < 10 ORDER BY item_price ASC')
 
 const countItemsInSection = section =>
   db.query('SELECT COUNT(*) FROM item WHER item_section = $1', section)
