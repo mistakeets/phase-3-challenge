@@ -51,7 +51,7 @@ function clearItems() {
   count = 0
   cartPrice = 0
   cartItems = []
-  cartPrice = []
+  priceItems = []
   document.getElementById('cart-item-count').innerHTML = `(${count})`
   modal.style.display = 'none'
 }
