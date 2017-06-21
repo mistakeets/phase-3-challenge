@@ -57,6 +57,23 @@ body {
   zoom: 1;
 }
 
+#modal-clear-items {
+  background-color: #fff;
+  border: 2px solid #000;
+  outline: none;
+  color: #000;
+  box-shadow: 5px 5px #37383a;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  padding: 4px 12px
+}
+
+#modal-clear-items:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
 
 /* LAYOUT UTILS */
 
